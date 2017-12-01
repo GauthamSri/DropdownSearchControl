@@ -1,0 +1,8 @@
+
+<div class="input-group" dropdown [isOpen]="open" tabindex="0" [keyboardNav]="true" >
+ <input [(ngModel)]="itemValue"  type="text" class="form-control" dropdownToggle (ngModelChange)="onChange()" (blur)="onBlur()">
+    <ul class="dropdown-menu scrollable-menu" dropdownMenu role="menu" aria-labelledby="single-button">
+    <li role="menuitem" *ngFor="let dropdownItem of dropdownItems" (click)="onItemSelected(dropdownItem)"><a class="dropdown-item" href="javascript:void(0)" >{{ dropdownItem.value }}</a></li>
+    </ul>
+          <span role="button" class="input-group-addon" dropdownToggle aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
+    </div>
